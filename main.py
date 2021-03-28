@@ -94,6 +94,12 @@ def say_welcome(message):
     bot.send_message(message.chat.id,
                      '<b>Hello! This is a telegram bot template written by <a href="https://github.com/otter18">otter18</a></b>',
                      parse_mode='html')
+    
+    
+@bot.message_handler(commands=["id"])
+def get_id(message):
+    logger.info(f'</code>@{message.from_user.username}<code> used /id')
+    bot.send_message(message.chat.id, f"user_id = {message.chat.id}")
 
 
 @bot.message_handler(func=lambda message: sum([int(elem in message.text.lower()) for elem in ['привет', 'hello', 'hi', 'privet']]))
@@ -124,12 +130,6 @@ def age(message):
 def echo(message):
     logger.info(f'</code>@{message.from_user.username}<code> used echo:\n\n%s', message.text)
     bot.send_message(message.chat.id, message.text)
-    
-    
-@bot.message_handler(commands=["id"])
-def get_id(message):
-    logger.info(f'</code>@{message.from_user.username}<code> used /id')
-    bot.send_message(message.chat.id, f"user_id = {message.chat.id}")
 
 
 if __name__ == '__main__':
