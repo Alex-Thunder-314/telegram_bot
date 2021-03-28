@@ -46,7 +46,7 @@ def status():
 
     return f'<h1>This is telegram bot server, ' \
            f'<a href="https://github.com/otter18/telegram-bot-template">templated</a> by ' \
-           f'<a href="https://github.com/otter18">@otter18</a></h1>' \
+           f'<a href="https://github.com/Alex-Thunder-314">@Alex-Thunder-314/a></h1>' \
            f'<p>Server uptime: {datetime.timedelta(seconds=time.time() - boot_time)}</p>' \
            f'<p>Server last boot at {boot_date}'
 
@@ -92,7 +92,7 @@ def webhook_off():
 def say_welcome(message):
     logger.info(f'</code>@{message.from_user.username}<code> used /start or /help')
     bot.send_message(message.chat.id,
-                     '<b>Hello! This is a telegram bot template written by <a href="https://github.com/otter18">otter18</a></b>',
+                     '<b>Hello! This is a telegram bot template written by <a href="https://github.com/Alex-Thunder-314">Alex-Thunder-314</a></b>',
                      parse_mode='html')
     
     
