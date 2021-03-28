@@ -114,9 +114,9 @@ def name(message):
     bot.send_message(message.chat.id, random.choices(['Я telegram-template-bot', 'Я бот шаблон, но ты можешь звать меня в свой проект', 'Это секрет. Используй команду /help, чтобы узнать']))
 
 
-@bot.message_handler(func=lambda message: sum([int(elem in message.text.lower()) for elem in ['мне', 'лет', 'год']]))
-def name(message):
-    logger.info(f'</code>@{message.from_user.username}<code> used name option:\n\n%s', message.text)
+@bot.message_handler(func=lambda message: sum([int(elem in message.text.lower()) for elem in ['мне', 'лет', 'год', 'года']]))
+def age(message):
+    logger.info(f'</code>@{message.from_user.username}<code> used age option:\n\n%s', message.text)
     bot.send_message(message.chat.id, random.choices(['А мне 100 тысяч лет, я храню знания с древних шумер', 'Ну ты и древний, дядя!']))    
     
     
