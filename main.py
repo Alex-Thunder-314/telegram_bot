@@ -92,7 +92,7 @@ def webhook_off():
 def say_welcome(message):
     logger.info(f'</code>@{message.from_user.username}<code> used /start or /help')
     bot.send_message(message.chat.id,
-                     '<b>Hello! This is a telegram bot template written by <a href="https://github.com/Alex-Thunder-314">Alex-Thunder-314</a></b>',
+                     '<b>Hello! This is a telegram bot written by <a href="https://github.com/Alex-Thunder-314">Alex-Thunder-314</a></b>',
                      parse_mode='html')
     
     
